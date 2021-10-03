@@ -1,5 +1,5 @@
 # 📡 wifimon
-
+![wifi screenshot](Screenshot.png)
 ### Synopsis
 `wifimon` is a wireless device monitoring terminal application that allows you to watch signal, noise and SNR levels as well as device configuration and network parameters of your wireless network hardware.
 
