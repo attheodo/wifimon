@@ -1,9 +1,15 @@
+prefix ?= /usr/local
+bindir = $(prefix)/bin
+
 build:
-	swift build
+	swift build -c release --disable-sandbox
 
-run:
-	swift run
+install: build
+	install -d "$(bindir)"
+	install ".build/release/wifimon" "$(bindir)"
 
-build-n-run:
-	swift build
-	swift run
+uninstall:
+	rm -rf "$(bindir)/wifimon"
+
+clean:
+	rm -rf .build
